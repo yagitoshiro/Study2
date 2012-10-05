@@ -18,42 +18,15 @@ var tab1 = Titanium.UI.createTab({
     window:win1
 });
 
-var switch1 = Ti.UI.createSwitch({
-  value:true,
-  top:30
+var label1 = Titanium.UI.createLabel({
+	color:'#999',
+	text:'I am Window 1',
+	font:{fontSize:20,fontFamily:'Helvetica Neue'},
+	textAlign:'center',
+	width:'auto'
 });
-win1.add(switch1);
 
-var slider = Ti.UI.createSlider({
-  min:0,
-  max:100,
-  value:0,
-  width:200,
-  height:Ti.UI.SIZE,
-  top:100
-});
-win1.add(slider);
-
-var progress = Ti.UI.createProgressBar({
-  width:200,
-  min:0,
-  max:100,
-  value:0,
-  height:Ti.UI.SIZE,
-  color:'#888',
-  message:'in progress...',
-  font:{fontSize:14},
-  style:Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
-  top:150
-});
-progress.show();
-win1.add(progress);
-
-slider.addEventListener('change', function(e){
-  if(switch1.value){
-    progress.value = e.source.value;
-  }
-});
+win1.add(label1);
 
 //
 // create controls tab and root window
