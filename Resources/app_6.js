@@ -19,8 +19,8 @@ var tab1 = Titanium.UI.createTab({
 });
 
 var scrollView = Ti.UI.createScrollView({
-  contentWidth:Ti.UI.FILL,
-  contentHeight:Ti.UI.FILL,
+  contentWidth: 'auto',
+  contentHeight: 'auto',
   top:0,
   width:Ti.UI.SIZE,
   height:Ti.UI.SIZE,
